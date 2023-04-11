@@ -1,4 +1,4 @@
-package com.projects.spring5;
+package com.projects.spring5.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
