@@ -16,8 +16,9 @@ public class Book {
     @OneToOne
     private Publisher publisher;
     @ManyToMany
-    @JoinTable(name="author_books",joinColumns = @JoinColumn(name = "book_id"),
-    inverseJoinColumns = @JoinColumn( name = "author_id"))
+    @JoinTable(name="author_books",
+            joinColumns = @JoinColumn(name = "book_id"),
+    inverseJoinColumns = @JoinColumn(   name = "author_id"))
     private Set<Author> Authors = new HashSet<>();
 
     public Book(){
@@ -75,6 +76,7 @@ public class Book {
     public void setAuthors(Set<Author> authors) {
         Authors = authors;
     }
+
 
     @Override
     public boolean equals(Object o) {
